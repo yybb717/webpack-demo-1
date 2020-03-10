@@ -41,7 +41,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i, //发现了任何以.css结尾的文件
-        //③①用js的话：css-loader会把这个css文件的内容读到高级js文件里，style-loader会把css内容放入script标签，再放入dist里的html文件的head里
+        //③①用js的话：css-loader会把这个css文件的内容读到高级js文件里成为js字符串，style-loader会把css内容的js字符串放入script标签，再放入dist里的html文件的head里
         //use: ["style-loader", "css-loader"]
         //③②用插件抽成文件的话
         use: [

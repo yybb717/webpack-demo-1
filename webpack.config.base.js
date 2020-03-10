@@ -18,15 +18,15 @@ module.exports = {
     rules: [
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
+        use: ["file-loader"] //把文件变成文件路径
       },
       {
         test: /\.styl$/,
-        loader: ["style-loader", "css-loader", "stylus-loader"]
+        loader: ["style-loader", "css-loader", "stylus-loader"] //把stylus代码转化成css代码，之后再把css转化经过两步转化成style标签
       },
       {
         test: /\.less$/,
-        loader: ["style-loader", "css-loader", "less-loader"]
+        loader: ["style-loader", "css-loader", "less-loader"] //把less代码转化成css代码，之后再把css转化经过两步转化成style标签
       },
       {
         test: /\.scss$/i,
@@ -34,7 +34,7 @@ module.exports = {
           "style-loader",
           "css-loader",
           {
-            loader: "sass-loader",
+            loader: "sass-loader", //把sass代码转化成css代码，之后再把css转化经过两步转化成style标签
             options: {
               implementation: require("dart-sass")
             }
