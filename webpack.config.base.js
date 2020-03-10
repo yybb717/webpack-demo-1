@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "哈哈哈",
-      template: "src/assets/index.html"
+      template: "src/assets/admin.html"
     })
   ],
   module: {

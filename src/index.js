@@ -7,9 +7,10 @@ console.log("jack");
 const div = document.getElementById("app");
 
 div.innerHTML = `<img src="${png}">`;
+
 const button = document.createElement("button");
 button.innerHTML = "懒加载";
-document.appendChild(button);
+div.appendChild(button);
 button.onclick = () => {
   const promise = import("./lazy");
   promise.then(module => {
